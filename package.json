@@ -20,5 +20,14 @@
   "bugs": {
     "url": "https://github.com/fevnax/HealthGuard/issues"
   },
-  "homepage": "https://github.com/fevnax/HealthGuard#readme"
+  "homepage": "https://github.com/fevnax/HealthGuard#readme",
+  "dependencies": {
+    "axios": "^1.13.2",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "express-rate-limit": "^8.2.1",
+    "uuid": "^13.0.0"
+  }
 }
