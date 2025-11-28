@@ -1,0 +1,24 @@
+{
+  "name": "healthguard",
+  "version": "1.0.0",
+  "description": "A webapp for Health crisis management",
+  "main": "index.js",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fevnax/HealthGuard.git"
+  },
+  "keywords": [
+    "AQI",
+    "Events",
+    "Outbreaks"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fevnax/HealthGuard/issues"
+  },
+  "homepage": "https://github.com/fevnax/HealthGuard#readme"
+}
