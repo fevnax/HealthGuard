@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthGuard - Health Risk Monitoring</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo-section">
+                <h1>HealthGuard</h1>
+            </div>
+            <div class="header-buttons">
+                <a href="/about" class="btn btn-primary">About</a>
+                <button class="btn btn-secondary" onclick="refreshData()">Refresh Data</button>
+            </div>
+        </header>
+
+        <!-- Search Bar -->
+        <form action="/set-location" method="POST" class="search-section">
+            <div class="search-wrapper">
+                <input type="text" name="city" placeholder="Enter location (e.g. Mumbai, Delhi)" required>
+                <button type="submit">Search</button>
+            </div>
+        </form>
+
+
+        <!-- Risk Indicator -->
+        <div class="risk-indicator">
+            <div class="risk-level">Current Health Risk Level</div>
+            <div class="risk-value" id="riskValue">MODERATE</div>
+            <div class="risk-description" id="riskDescription">
+                Based on current AQI, disease trends, and local events. Monitor recommendations below for resource
+                planning.
+            </div>
+        </div>
+
+        <!-- Info Cards -->
+        <div class="cards-grid">
+            <!-- AQI Card -->
+            <div class="info-card">
+                <div class="card-header">
+                    <div class="card-icon icon-aqi">🌫️</div>
+                    <div class="card-title">Air Quality Index</div>
+                </div>
+                <div class="card-value" id="aqiValue">142</div>
+                <div class="card-details">
+                    PM2.5: 65 μg/m³<br>
+                    Location: <span id="currentLocation">Mumbai, Maharashtra</span>
+                </div>
+                <span class="status-badge badge-warning" id="aqiStatus">Moderate</span>
+            </div>
+
+            <!-- Events Card -->
+            <div class="info-card">
+                <div class="card-header">
+                    <div class="card-icon icon-events">📅</div>
+                    <div class="card-title">Active Events</div>
+                </div>
+                <div class="card-value" id="eventsValue">3</div>
+                <div class="card-details">
+                    • Marathon Event (10k attendees)<br>
+                    • Festival Gathering<br>
+                    • Concert Series
+                </div>
+                <span class="status-badge badge-warning">Increased Risk</span>
+            </div>
+
+            <!-- Outbreaks Card -->
+            <div class="info-card">
+                <div class="card-header">
+                    <div class="card-icon icon-outbreaks">🦠</div>
+                    <div class="card-title">Disease Outbreaks</div>
+                </div>
+                <div class="card-value" id="outbreaksValue">2</div>
+                <div class="card-details">
+                    • Seasonal Flu (Active)<br>
+                    • Dengue Cases (Moderate)<br>
+                    Weekly increase: +15%
+                </div>
+                <span class="status-badge badge-danger">Monitor Closely</span>
+            </div>
+
+            <!-- Trends Card -->
+            <div class="info-card">
+                <div class="card-header">
+                    <div class="card-icon icon-trends">📈</div>
+                    <div class="card-title">Health Trends</div>
+                </div>
+                <div class="card-value" id="trendsValue">↑ 12%</div>
+                <div class="card-details">
+                    Respiratory cases up 12%<br>
+                    ER visits: +8%<br>
+                    Trend: Increasing
+                </div>
+                <span class="status-badge badge-warning">Upward Trend</span>
+            </div>
+        </div>
+
+        <!-- Predictions Section -->
+        <div class="predictions">
+            <h2>📊 Resource Predictions & Recommendations</h2>
+
+            <div class="prediction-grid">
+                <div class="prediction-card">
+                    <h3>Staff Requirements</h3>
+                    <div class="prediction-value">+25%</div>
+                    <div class="prediction-detail">
+                        Recommended increase in medical staff for next 2 weeks
+                    </div>
+                </div>
+
+                <div class="prediction-card">
+                    <h3>Supply Needs</h3>
+                    <div class="prediction-value">+30%</div>
+                    <div class="prediction-detail">
+                        Additional respiratory supplies & medications needed
+                    </div>
+                </div>
+
+                <div class="prediction-card">
+                    <h3>Bed Capacity</h3>
+                    <div class="prediction-value">85%</div>
+                    <div class="prediction-detail">
+                        Expected utilisation rate by week's end
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline">
+                <h3>⏰ Surge Prediction Timeline</h3>
+                <div class="timeline-item">
+                    <div class="timeline-date">Next 3 Days</div>
+                    <div class="timeline-content">Minor increase in respiratory cases expected. Current capacity
+                        sufficient.</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Days 4–7</div>
+                    <div class="timeline-content">Moderate surge anticipated. Recommend 15% staff increase and supply
+                        stock-up.</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Days 8–14</div>
+                    <div class="timeline-content">Peak surge expected. Full resource mobilisation advised. Consider
+                        opening overflow areas.</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Days 15+</div>
+                    <div class="timeline-content">Gradual decline expected. Maintain elevated readiness for 2 weeks
+                        post-peak.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ... your existing JS unchanged ...
+    </script>
+
+</body>
+
+</html>

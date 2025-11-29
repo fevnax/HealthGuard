@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A webapp for Health crisis management",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": ""
   },
